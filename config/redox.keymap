@@ -228,24 +228,24 @@
             display-name = "Base";
 
 /*
- * ┌──────┬──────┬──────┬──────┬──────┬──────┐                    ┌──────┬──────┬──────┬──────┬──────┬──────┐
- * │  =   │  1   │  2   │  3   │  4   │  5   │                    │  6   │  7   │  8   │  9   │  0   │  -   │
- * ├──────┼──────┼──────┼──────┼──────┼──────┼──────┐      ┌──────┼──────┼──────┼──────┼──────┼──────┼──────┤
- * │ TAB  │  Q   │  W   │  E   │  R   │  T   │ HOME │      │ PGUP │  Y   │  U   │  I   │  O   │  P   │ BSPC │
- * ├──────┼──────┼──────┼──────┼──────┼──────┼──────┤      ├──────┼──────┼──────┼──────┼──────┼──────┼──────┤
- * │LSHFT │  A   │  S   │  D   │  F   │  G   │  END │      │ PGDN │  H   │  J   │  K   │  L   │  ;   │  '   │
- * ├──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┤
+ * ┌──────┬──────┬──────┬──────┬──────┬──────┐                           ┌──────┬──────┬──────┬──────┬──────┬──────┐
+ * │  =   │  1   │  2   │  3   │  4   │  5   │                           │  6   │  7   │  8   │  9   │  0   │  -   │
+ * ├──────┼──────┼──────┼──────┼──────┼──────┼──────┐             ┌──────┼──────┼──────┼──────┼──────┼──────┼──────┤
+ * │ TAB  │  Q   │  W   │  E   │  R   │  T   │ HOME │             │ PGUP │  Y   │  U   │  I   │  O   │  P   │ BSPC │
+ * ├──────┼──────┼──────┼──────┼──────┼──────┼──────┤             ├──────┼──────┼──────┼──────┼──────┼──────┼──────┤
+ * │LSHFT │  A   │  S   │  D   │  F   │  G   │  END │             │ PGDN │  H   │  J   │  K   │  L   │  ;   │  '   │
+ * ├──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┬──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┤
  * │LCTRL │  Z   │  X   │  C   │  V   │  B   │  (   │  [   │  ]   │  )   │  N   │  M   │  ,   │  .   │  /   │mo EX │
- * ├──────┼──────┼──────┼──────┼──────┼──────┴──────┼──────┼──────┼──────┴──────┼──────┼──────┼──────┼──────┤
+ * ├──────┼──────┼──────┼──────┼──────┼──────┴──────┼──────┼──────┼──────┼──────┴──────┼──────┼──────┼──────┼──────┤
  * │ESC   │ ALT  │ GUI  │mo NAV│    SPACE    │ LGUI │ DEL  │ENTER │   lt SYM    │mo NAV│ LEFT │ DOWN │ UP   │RIGHT │
- * └──────┴──────┴──────┴──────┴─────────────┴──────┴──────┴──────┴─────────────┴──────┴──────┴──────┴──────┘
+ * └──────┴──────┴──────┴──────┴─────────────┴──────┴──────┴──────┴────────────────────┴──────┴──────┴──────┴──────┘
  */
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3   &kp N4   &kp N5                                              &kp N6     &kp N7     &kp N8        &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E    &kp R    &kp T      &kp HOME                      &kp PG_UP  &kp Y      &kp U      &kp I         &kp O     &kp P     &kp BSPC
-&kp LSHFT  &kp A      &kp S     &kp D    &kp F    &kp G      &kp END                       &kp PG_DN  &kp H      &kp J      &kp K         &kp L     &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z      &kp X     &kp C    &kp V    &kp B      &kp LPAR  &kp LBKT  &kp RBKT  &kp RPAR   &kp N      &kp M      &kp COMMA     &kp DOT   &kp FSLH  &mo EXTRA
-&kp ESC    &kp LALT   &kp LGUI  &mo NAV         &kp SPACE     &kp LGUI  &kp DEL   &kp RET   &lt SYM TAB         &mo NAV     &kp LEFT      &kp DOWN  &kp UP    &kp RIGHT
+&kp PLUS   &kp N1     &kp N2    &kp N3   &kp N4   &kp N5                                              &kp N6     &kp N7     &kp N8        &kp N9    &kp N0    &kp MINUS
+&kp TAB    &kp Q      &kp W     &kp E    &kp R    &kp T      &kp HOME                      &kp LBKT   &kp Y      &kp U      &kp I         &kp O     &kp P     &kp RBKT
+&kp LCTRL  &kp A      &kp S     &kp D    &kp F    &kp G      &kp ESC                       &kp BSLH   &kp H      &kp J      &kp K         &kp L     &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z      &kp X     &kp C    &kp V    &kp B      &kp LCTRL &kp LBKT  &mo EXTRA &kp RCTRL  &kp N      &kp M      &kp COMMA     &kp DOT   &kp FSLH  &kp RSHFT
+&kp ESC    &kp GRAVE  &kp BSLH  &kp LALT       &kp LGUI      &mo NAV   &kp BSPC  &kp RET   &kp SPACE           &kp RGUI     &kp RALT      &kp C_PREV  &kp C_NEXT &kp C_PP
             >;
         };
 
@@ -257,11 +257,11 @@
  * strzałki na home row prawej ręki, BT na lewej.
  */
             bindings = <
-&trans     &kp F1        &kp F2        &kp F3        &kp F4           &kp F5                                                  &kp F6     &kp F7    &kp F8    &kp F9    &kp F10  &trans
-&trans     &trans        &trans        &kp UP_ARROW  &browsertab      &kp PAGE_UP    &trans                          &trans   &kp N0     &kp N4    &kp N5    &kp N6    &trans   &trans
-&caps_word &trans        &kp LEFT      &kp DOWN      &kp RIGHT_ARROW  &kp PAGE_DOWN  &trans                          &trans   &trans     &kp N1    &kp N2    &kp N3    &trans   &trans
-&trans     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR       &bt BT_CLR_ALL &trans  &trans  &trans  &trans           &kp N0     &kp N7    &kp N8    &kp N9    &trans   &trans
-&trans     &trans        &trans        &trans                  &trans                &trans  &trans  &trans  &mo ADJ                     &trans    &trans    &trans    &trans   &trans
+&trans     &kp F1        &kp F2        &kp F3        &kp F4           &kp F5                                          &kp F6     &kp F7    &kp F8    &kp F9    &kp F10   &trans
+&trans     &trans        &trans        &trans        &trans           &trans         &trans                  &trans   &kp LBKT   &kp RBKT  &kp LPAR  &kp RPAR  &kp MINUS &trans
+&caps_word &trans        &trans        &trans        &trans           &trans         &trans                  &trans   &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT &kp PIPE  &kp GRAVE
+&trans     &trans        &trans        &trans        &trans           &trans         &trans  &trans  &trans  &trans   &kp LBRC   &kp RBRC  &kp EQUAL &kp UNDER &kp TILDE &trans
+&trans     &trans        &trans        &trans                  &trans                &trans  &trans  &trans  &mo ADJ       &trans    &trans    &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE
             >;
         };
 
@@ -283,10 +283,10 @@
         ADJ {
             display-name = "System";
             bindings = <
-&studio_unlock  &trans        &trans        &trans        &trans        &trans                                                                    &trans       &trans         &trans        &trans        &trans       &trans
+&studio_unlock  &trans        &trans        &trans        &trans        &trans                                                                    &trans       &trans         &trans        &trans        &trans       &bootloader
 &trans          &kp F1        &kp F2        &kp F3        &kp F4        &kp F5            &trans                                          &trans  &kp F6       &kp F7         &kp F8        &kp F9        &kp F10      &trans
 &trans          &kp F11       &kp F12       &trans        &trans        &trans            &trans                                          &trans  &trans       &trans         &trans        &trans        &trans       &trans
-&trans          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &trans  &trans  &trans  &trans                          &bt BT_CLR   &bt BT_CLR_ALL &out OUT_USB  &out OUT_BLE  &bootloader  &trans
+&trans          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &trans  &trans  &trans  &trans                          &bt BT_CLR   &bt BT_CLR_ALL &out OUT_USB  &out OUT_BLE  &trans  &trans
 &trans          &trans        &trans        &trans                &trans                  &trans  &trans  &trans  &trans                                  &trans       &trans         &trans        &trans       &trans
             >;
         };
