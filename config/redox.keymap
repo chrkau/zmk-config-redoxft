@@ -32,56 +32,56 @@
 
 / {
     behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+        /* hm: homerow_mods { */
+        /*     compatible = "zmk,behavior-hold-tap"; */
+        /*     #binding-cells = <2>; */
+        /*     tapping-term-ms = <200>; */
+        /*     flavor = "tap-preferred"; */
+        /*     bindings = <&kp>, <&kp>; */
 
-            quick-tap-ms = <180>;
-            require-prior-idle-ms = <120>;
-        };
+        /*     quick-tap-ms = <180>; */
+        /*     require-prior-idle-ms = <120>; */
+        /* }; */
 
-        para: para {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
-        };
+        /* para: para { */
+        /*     compatible = "zmk,behavior-tap-dance"; */
+        /*     #binding-cells = <0>; */
+        /*     bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>; */
+        /* }; */
 
-        caps: caps {
-            compatible = "zmk,behavior-caps-word";
-            #binding-cells = <0>;
-            continue-list = <MINUS BACKSPACE>;
-        };
+        /* caps: caps { */
+        /*     compatible = "zmk,behavior-caps-word"; */
+        /*     #binding-cells = <0>; */
+        /*     continue-list = <MINUS BACKSPACE>; */
+        /* }; */
 
-        paraless: paraless {
-            compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp LEFT_PARENTHESIS>, <&kp LESS_THAN>;
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
+        /* paraless: paraless { */
+        /*     compatible = "zmk,behavior-mod-morph"; */
+        /*     bindings = <&kp LEFT_PARENTHESIS>, <&kp LESS_THAN>; */
+        /*     #binding-cells = <0>; */
+        /*     mods = <(MOD_LSFT)>; */
+        /* }; */
 
-        paragreat: paragreat {
-            compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
+        /* paragreat: paragreat { */
+        /*     compatible = "zmk,behavior-mod-morph"; */
+        /*     bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>; */
+        /*     #binding-cells = <0>; */
+        /*     mods = <(MOD_LSFT)>; */
+        /* }; */
     };
 
     macros {
-        browsertab: browsertab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp TAB>,
-                <&macro_release>,
-                <&kp LCTRL>;
-        };
+        /* browsertab: browsertab { */
+        /*     compatible = "zmk,behavior-macro"; */
+        /*     #binding-cells = <0>; */
+        /*     bindings = */
+        /*         <&macro_press>, */
+        /*         <&kp LCTRL>, */
+        /*         <&macro_tap>, */
+        /*         <&kp TAB>, */
+        /*         <&macro_release>, */
+        /*         <&kp LCTRL>; */
+        /* }; */
     };
 
     /*
@@ -103,122 +103,122 @@
     combos {
         compatible = "zmk,combos";
 
-        /* ESC = D + K (jak w Corne: pozycje 13+29 → tu 30+36) */
-        escape {
-            bindings = <&kp ESCAPE>;
-            key-positions = <30 36>;
-        };
+/*         /1* ESC = D + K (jak w Corne: pozycje 13+29 → tu 30+36) *1/ */
+/*         escape { */
+/*             bindings = <&kp ESCAPE>; */
+/*             key-positions = <30 36>; */
+/*         }; */
 
-        /* DEL = R + U (Corne 15+21 → Redox 17+21) */
-        delete {
-            bindings = <&kp DELETE>;
-            key-positions = <17 21>;
-        };
+/*         /1* DEL = R + U (Corne 15+21 → Redox 17+21) *1/ */
+/*         delete { */
+/*             bindings = <&kp DELETE>; */
+/*             key-positions = <17 21>; */
+/*         }; */
 
-        /* % = T + J (Corne 5+17 → Redox 18+35) */
-        perc {
-            bindings = <&kp PERCENT>;
-            key-positions = <18 35>;
-            layers = <0>;
-        };
+/*         /1* % = T + J (Corne 5+17 → Redox 18+35) *1/ */
+/*         perc { */
+/*             bindings = <&kp PERCENT>; */
+/*             key-positions = <18 35>; */
+/*             layers = <0>; */
+/*         }; */
 
-        /* = = (V + J) (Corne 28+16 → Redox 45+35) */
-        equal {
-            bindings = <&kp EQUAL>;
-            key-positions = <45 35>;
-            layers = <0>;
-        };
+/*         /1* = = (V + J) (Corne 28+16 → Redox 45+35) *1/ */
+/*         equal { */
+/*             bindings = <&kp EQUAL>; */
+/*             key-positions = <45 35>; */
+/*             layers = <0>; */
+/*         }; */
 
-        /* $ = R + J (Corne 4+16 → Redox 17+35) */
-        dollar {
-            bindings = <&kp DOLLAR>;
-            key-positions = <17 35>;
-            layers = <0>;
-        };
+/*         /1* $ = R + J (Corne 4+16 → Redox 17+35) *1/ */
+/*         dollar { */
+/*             bindings = <&kp DOLLAR>; */
+/*             key-positions = <17 35>; */
+/*             layers = <0>; */
+/*         }; */
 
-        /* # = E + K (Corne 3+15 → Redox 16+36) */
-        pound {
-            bindings = <&kp POUND>;
-            key-positions = <16 36>;
-            layers = <0>;
-        };
+/*         /1* # = E + K (Corne 3+15 → Redox 16+36) *1/ */
+/*         pound { */
+/*             bindings = <&kp POUND>; */
+/*             key-positions = <16 36>; */
+/*             layers = <0>; */
+/*         }; */
 
-        /* @ = W + L (Corne 2+14 → Redox 15+37) */
-        at {
-            bindings = <&kp AT>;
-            key-positions = <15 37>;
-            layers = <0>;
-        };
+/*         /1* @ = W + L (Corne 2+14 → Redox 15+37) *1/ */
+/*         at { */
+/*             bindings = <&kp AT>; */
+/*             key-positions = <15 37>; */
+/*             layers = <0>; */
+/*         }; */
 
-        /* \ = C + L (Corne 26+14 → Redox 44+37) */
-        backslash {
-            bindings = <&kp BACKSLASH>;
-            key-positions = <44 37>;
-            layers = <0>;
-        };
+/*         /1* \ = C + L (Corne 26+14 → Redox 44+37) *1/ */
+/*         backslash { */
+/*             bindings = <&kp BACKSLASH>; */
+/*             key-positions = <44 37>; */
+/*             layers = <0>; */
+/*         }; */
 
-        /* * = U + M (Corne 8+20 → Redox 21+51) */
-        star {
-            bindings = <&kp STAR>;
-            key-positions = <21 51>;
-            layers = <0>;
-        };
+/*         /1* * = U + M (Corne 8+20 → Redox 21+51) *1/ */
+/*         star { */
+/*             bindings = <&kp STAR>; */
+/*             key-positions = <21 51>; */
+/*             layers = <0>; */
+/*         }; */
 
-        /* / = M + . (Corne 32+20 → Redox 51+53) - uwaga: uważne sprawdzenie */
-        slash {
-            bindings = <&kp SLASH>;
-            key-positions = <53 51>;
-            layers = <0>;
-        };
+/*         /1* / = M + . (Corne 32+20 → Redox 51+53) - uwaga: uważne sprawdzenie *1/ */
+/*         slash { */
+/*             bindings = <&kp SLASH>; */
+/*             key-positions = <53 51>; */
+/*             layers = <0>; */
+/*         }; */
 
-        /* + = Y + N (Corne 7+19 → Redox 20+50) */
-        plus {
-            bindings = <&kp PLUS>;
-            key-positions = <20 50>;
-            layers = <0>;
-        };
+/*         /1* + = Y + N (Corne 7+19 → Redox 20+50) *1/ */
+/*         plus { */
+/*             bindings = <&kp PLUS>; */
+/*             key-positions = <20 50>; */
+/*             layers = <0>; */
+/*         }; */
 
-        /* - = N + , (Corne 31+19 → Redox 50+52) */
-        minus {
-            bindings = <&kp KP_MINUS>;
-            key-positions = <50 52>;
-            layers = <0>;
-        };
+/*         /1* - = N + , (Corne 31+19 → Redox 50+52) *1/ */
+/*         minus { */
+/*             bindings = <&kp KP_MINUS>; */
+/*             key-positions = <50 52>; */
+/*             layers = <0>; */
+/*         }; */
 
-        /* _ = , + . (Corne 30+18 → Redox 52+53) */
-        underscore {
-            bindings = <&kp UNDER>;
-            key-positions = <52 53>;
-            layers = <0>;
-        };
+/*         /1* _ = , + . (Corne 30+18 → Redox 52+53) *1/ */
+/*         underscore { */
+/*             bindings = <&kp UNDER>; */
+/*             key-positions = <52 53>; */
+/*             layers = <0>; */
+/*         }; */
 
-        /* [ = N + M (Corne 31+32 → Redox 50+51) */
-        leftbrack {
-            bindings = <&kp LEFT_BRACKET>;
-            key-positions = <50 51>;
-            layers = <0>;
-        };
+/*         /1* [ = N + M (Corne 31+32 → Redox 50+51) *1/ */
+/*         leftbrack { */
+/*             bindings = <&kp LEFT_BRACKET>; */
+/*             key-positions = <50 51>; */
+/*             layers = <0>; */
+/*         }; */
 
-        /* ] = , + M (Corne 33+32 → Redox 52+51) */
-        rightbrack {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <52 51>;
-            layers = <0>;
-        };
+/*         /1* ] = , + M (Corne 33+32 → Redox 52+51) *1/ */
+/*         rightbrack { */
+/*             bindings = <&kp RIGHT_BRACKET>; */
+/*             key-positions = <52 51>; */
+/*             layers = <0>; */
+/*         }; */
 
-        /* < = M + N (paraless) - Corne 20+19 → Redox 51+50 */
-        para-less {
-            bindings = <&paraless>;
-            key-positions = <51 50>;
-            layers = <0>;
-        };
+/*         /1* < = M + N (paraless) - Corne 20+19 → Redox 51+50 *1/ */
+/*         para-less { */
+/*             bindings = <&paraless>; */
+/*             key-positions = <51 50>; */
+/*             layers = <0>; */
+/*         }; */
 
-        /* > = M + , (paragreat) - Corne 20+21 - to były inne pozycje, używam M+, na razie */
-        para-great {
-            bindings = <&paragreat>;
-            key-positions = <51 52>;
-            layers = <0>;
-        };
+/*         /1* > = M + , (paragreat) - Corne 20+21 - to były inne pozycje, używam M+, na razie *1/ */
+/*         para-great { */
+/*             bindings = <&paragreat>; */
+/*             key-positions = <51 52>; */
+/*             layers = <0>; */
+/*         }; */
     };
 
     keymap {
